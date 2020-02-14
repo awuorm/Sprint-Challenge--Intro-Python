@@ -24,48 +24,54 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = []
+a = [man.name for man in humans if man.name[0] == "D"]
 print(a)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = []
+b = [man.name for man in humans if man.name[-1] == "e"]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = []
+alphabet = ["C","D","E","F","G"]
+# def findletter(m):
+#     for i in m:
+#         return i
+# letter = map(findletter,alphabet)
+# print(letter)
+c = [man.name for man in humans if (man.name[0] in alphabet)]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
-d = []
+d = [man.age + 10 for man in humans]
 print(d)
 
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = []
+e = [f"{man.name}-{man.age}"  for man in humans]
 print(e)
 
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 print("Names and ages between 27 and 32:")
-f = []
+f = [(man.name,man.age)  for man in humans if man.age >= 27 and man.age <= 32]
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
-g = []
+g = [Human(man.name.upper(), man.age + 5)  for man in humans]
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
 import math
-h = []
+h =  [math.sqrt(man.age) for man in humans]
 print(h)
