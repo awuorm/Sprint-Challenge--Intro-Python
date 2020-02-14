@@ -3,13 +3,13 @@ from oop1 import *
 
 class Oop1Tests(unittest.TestCase):
   def setUp(self):
-    self.vehicle = Vehicle()
-    self.flight_vehicle = FlightVehicle()
-    self.ground_vehicle = GroundVehicle()
-    self.car = Car()
-    self.motorcycle = Motorcycle()
-    self.starship = Starship()
-    self.airplane = Airplane()
+    self.vehicle = Vehicle("saloon")
+    self.flight_vehicle = FlightVehicle("boeing 700")
+    self.ground_vehicle = GroundVehicle(Vehicle)
+    self.car = Car(GroundVehicle)
+    self.motorcycle = Motorcycle(GroundVehicle)
+    self.starship = Starship("Starwars")
+    self.airplane = Airplane(FlightVehicle)
 
   def test_flight_vehicle(self):
     self.assertTrue(isinstance(self.flight_vehicle, FlightVehicle))
