@@ -10,7 +10,7 @@ class City:
         self.lon = lon
 
     def __str__(self):
-        return f"city:{self.name},latitude:{self.lat},lon:{self.lon}"
+        return f"({self.name},{self.lat},{self.lon})"
 
 
 # We have a collection of US cities with population over 750,000 stored in the
@@ -40,7 +40,8 @@ def cityreader(cities=[]):
             citylon = row[4]
             newcity = City(cityname, citylat, citylon)
             cities.append(newcity)
-            # print(cityname,citylat,citylon)
+            # print(cityname,citylat,citylon
+        del cities[0]
         return cities
 
 
@@ -48,10 +49,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    if c.__str__() == "city:city,latitude:lat,lon:lng":
-      cities.remove(c)
-    else:
-      print(c.__str__())
+      print(c)
 
 # STRETCH GOAL!
 #
@@ -83,14 +81,25 @@ for c in cities:
 # Salt Lake City: (40.7774,-111.9301)
 
 # TODO Get latitude and longitude values from the user
-
+user_input1 = input("Enter lat1,lon2: ")
+user_input2 = input("Enter lat2,lon2: ")
+input1lat = user_input1.split(",")[0]
+input2lat =user_input2.split(",")[0]
+input1lon = user_input1.split(",")[1]
+input2lon =user_input2.split(",")[1]
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
-    # within will hold the cities that fall within the specified region
     within = []
+    print(lat1, lon1, lat2, lon2, cities)
+    for city in cities:
+          if(city["lat"] == lat1 or lat2 and city["lon"] == lon1 or lon 2):
+              print(city)
+              within.append(city)
+    # within will hold the cities that fall within the specified region
 
     # TODO Ensure that the lat and lon valuse are all floats
     # Go through each city and check to see if it falls within
     # the specified coordinates.
 
     return within
+cityreader_stretch(input1lat,input1lon,input2lat,input2lon,cities)
