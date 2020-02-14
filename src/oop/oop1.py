@@ -20,37 +20,37 @@
 
 
 class Vehicle:
-    def __init__(self, vehicle):
-        self.vehicle = vehicle
+    # def __init__(self, vehicle):
+    #     self.vehicle = vehicle
     pass
 
 
 class GroundVehicle(Vehicle):
-    def __init__(self, groundvehicle):
-        self.groundvehicle = groundvehicle
+    # def __init__(self, groundvehicle):
+    #     self.groundvehicle = groundvehicle
     pass
 
 class Car(GroundVehicle):
-    def __init__(self,car):
-        self.car = car
+    # def __init__(self,car):
+    #     self.car = car
     pass
 class Motorcycle(GroundVehicle):
-    def __init__(self,motorcycle):
-        self.motorcycle = motorcycle
+    # def __init__(self,motorcycle):
+    #     self.motorcycle = motorcycle
     pass
 
 
 class FlightVehicle(Vehicle):
-    def __init__(self, vehicle):
-        self.vehicle = vehicle
+    # def __init__(self, vehicle):
+    #     self.vehicle = vehicle
     pass
 
 class Airplane(FlightVehicle):
-    def __init__(self, vehicle):
-        self.vehicle = vehicle
+    # def __init__(self, vehicle):
+    #     self.vehicle = vehicle
     pass
 
 class Starship(FlightVehicle):
-    def __init__(self, vehicle):
-        self.vehicle = vehicle
+    # def __init__(self, vehicle):
+    #     self.vehicle = vehicle
     pass
