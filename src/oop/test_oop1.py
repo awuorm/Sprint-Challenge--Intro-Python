@@ -4,11 +4,11 @@ from oop1 import *
 class Oop1Tests(unittest.TestCase):
   def setUp(self):
     self.vehicle = Vehicle("saloon")
-    self.flight_vehicle = FlightVehicle("boeing 700")
+    self.flight_vehicle = FlightVehicle(Vehicle)
     self.ground_vehicle = GroundVehicle(Vehicle)
     self.car = Car(GroundVehicle)
     self.motorcycle = Motorcycle(GroundVehicle)
-    self.starship = Starship("Starwars")
+    self.starship = Starship(FlightVehicle)
     self.airplane = Airplane(FlightVehicle)
 
   def test_flight_vehicle(self):
