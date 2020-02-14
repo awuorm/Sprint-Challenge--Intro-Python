@@ -36,13 +36,13 @@ print(b)
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-# alphabet = ["C","D","E","F","G"]
+alphabet = ["C","D","E","F","G"]
 # def findletter(m):
 #     for i in m:
 #         return i
 # letter = map(findletter,alphabet)
 # print(letter)
-c = [man.name for man in humans if man.name[0] == "C"]
+c = [man.name for man in humans if (man.name[0] in alphabet)]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
